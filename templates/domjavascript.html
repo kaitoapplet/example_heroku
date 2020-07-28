@@ -1,0 +1,56 @@
+<!--staticフォルダの読むこみ-->
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>domjavascript</title>
+</head>
+<body>
+
+<!--    1.idの指定で引っ張ってくる-->
+
+    <p id="dom1">こんにちは</p>
+<!--ボタンをクリックすることでjavascriptのshow()関数が実行される-->
+    <input type="button" value="dom_id" onclick="show1()">
+<!--javascriptファイル読み込み-->
+     <script type="text/javascript" src="{% static 'js/dom.js' %}"></script>
+
+    <p>--------------------------------------------------------------------------------</p>
+
+
+<!--2.タグの指定でひぱってくる-->
+
+    <p>p1タグだよ</p>
+    <div>div1タグだよ</div>
+    <p>p2タグだよ</p>
+    <div>div1タグだよ</div>
+
+    <input type="button" value="dom_タグ_p" onclick="show2_p()">
+    <input type="button" value="dom_タグ_div" onclick="show2_div()">
+
+<!--javascriptファイル読み込み-->
+<!--     <script type="text/javascript" src="{% static 'js/dom.js' %}"></script>-->
+
+
+    <p>--------------------------------------------------------------------------------</p>
+
+<!--    3.name属性を使って引っ張ってくる-->
+
+    <input type="text" name="dom">
+    <input type="button" value="取得" onclick="show3()">
+
+<p>--------------------------------------------------------------------------------</p>
+
+<!--4.class属性を使って引っ張ってくる-->
+
+    <ul>
+        <li class="foo">要素1</li>
+        <li class="bar">要素2</li>
+        <li class="foo">要素3</li>
+        <li>要素4</li>
+        <li class="bar">要素5</li>
+    </ul>
+    <input type="button" value="取得" onclick="show4()">
+</body>
+</html>

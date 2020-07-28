@@ -1,0 +1,19 @@
+<!--staticフォルダの読むこみ-->
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+<!--1.html内に書き込むタイプのjavascpt処理-->
+    <script>
+        console.log('hello');
+    </script>
+<!--2.外部ファイルにあるjavascript処理-->
+    <script src="../static/js/style.js"></script>
+<!--3.djangoにおけるjavascript処理-->
+     <script type="text/javascript" src="{% static 'js/django.js' %}"></script>
+</body>
+</html>

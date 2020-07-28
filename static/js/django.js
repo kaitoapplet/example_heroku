@@ -1,0 +1,1 @@
+console.log('djangoにおける外部ファイル')

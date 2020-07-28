@@ -68,3 +68,9 @@ class BoardCreate(CreateView):
     model = BoardModel
     fields = ('title', 'content', 'author', 'images')
     success_url = reverse_lazy('list')
+    
+def importjavascriptfunc(request):
+    return render(request, 'importjavascript.html')
+
+def domjavascriptfunc(request):
+    return render(request, 'domjavascript.html')
